@@ -55,6 +55,9 @@ contract SimpleBank {
             enrolled[msg.sender] = true;
             emit LogEnrolled(msg.sender);
         }
+        // to save gas:
+        // return true;
+        // this function will return true no matter what
         return enrolled[msg.sender];
     }
 
